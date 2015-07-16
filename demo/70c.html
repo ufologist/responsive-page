@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- http://sale.jd.com/m/act/LZkDEwunm53ilyrR.html -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no" />
+    <title>7客恋城 - 70c.com | 70度一分钟轻松搞定H5场景制作</title>
+    <script src="http://sale.jd.com/jm.htm?js=/m-misc/script/zepto.js"></script>
+    <style>
+    body {
+        margin: 0;
+    }
+    /* 注意避免父级不包含 margin 区域的问题(margin collapse) */
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    img {
+        vertical-align: middle; /* 去除img之间的间隙, 可以通过设置body的背景来观察 */
+    }
+    </style>
+</head>
+<body style="background-color: #FFEDF3;">
+    <div class="mod-responsive">
+        <!-- 注意DOM结构, 必须将IMG元素用块级元素包裹起来! 一般使用div -->
+        <div>
+            <img src="img/slice1.jpg" width="640" height="354" alt="">
+        </div>
+        <div style="position: relative;">
+            <img src="img/slice2.jpg" width="640" height="344" alt="">
+            <a style="position: absolute; top: 225px; left: 70px; width: 110px; height: 40px; background-color: rgba(0,0,0,0.5);" href="http://70c.com/register.html" target="_blank" title="点击注册"></a>
+            <a style="position: absolute; top: 160px; left: 340px; width: 150px; height: 120px; background-color: rgba(0,0,0,0.5);" href="http://70c.com/w/CCZGWZZ" target="_blank" title="恋城"></a>
+        </div>
+        <div>
+            <img src="img/slice3.jpg" width="640" height="529" alt="">
+        </div>
+        <div>
+            <img src="img/slice4.jpg" width="640" height="441" alt="">
+        </div>
+    </div>
+
+    <script src="https://rawgit.com/ufologist/responsive-page/master/responsive-page.js"></script>
+    <script>
+    function responsiveIt() {
+        responsivePage({
+            // selector: '.mod-responsive',
+            // sliceWidth: 640,
+            center: true
+        });
+    }
+    // document.addEventListener('DOMContentLoaded', function() {
+        responsiveIt();
+    // }, false)
+    window.onresize = function() {
+        responsiveIt();
+    };
+    </script>
+</body>
+</html>

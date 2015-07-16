@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- http://sale.jd.com/m/act/LZkDEwunm53ilyrR.html -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no" />
+    <title>专题landing页(着陆页, 主页)模版 -- 同时适配移动端和PC端</title>
+    <style>
+    body {
+        margin: 0;
+    }
+    /* 注意避免父级不包含 margin 区域的问题(margin collapse) */
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    img {
+        vertical-align: middle; /* 去除img之间的间隙, 可以通过设置body的背景来观察 */
+    }
+    </style>
+</head>
+<body style="background-color: #eee;">
+    <div class="mod-responsive">
+        <p>专题landing页模版</p>
+        <ul>
+            <li>页面内容一般为几张图片拼接</li>
+            <li>同时要适配移动端和PC端</li>
+            <li>要自适应宽度</li>
+            <li>(绝对)定位元素仅需使用px单位即可适配</li>
+            <li>切图时仅需切640宽的图片</li>
+            <li>注意很长很长很长很长很长很长很长很长很长很长很长的内容, 换行也需要正确123456789</li>
+        </ul>
+        <!-- 注意DOM结构, 必须将IMG元素用块级元素包裹起来! 一般使用div -->
+        <div style="position: relative;">
+            <img src="http://img13.360buyimg.com/cms/jfs/t1006/343/1424169737/94138/1c5a614e/55a1eb48N7c8182a8.jpg" width="640" height="1266" alt="" />
+            <span style="position: absolute; top: 51px; left: 203px; background-color: #ff0;">适配绝对定位元素的位置, 且不会出现换行影响样式效果!</span>
+        </div>
+        <div>
+            <img src="http://img10.360buyimg.com/cms/jfs/t1630/256/676742895/100606/52f6db7c/55a34ea5Nc3386559.jpg" width="640" height="916" alt="" />
+        </div>
+    </div>
+
+    <div class="mod-responsive">
+        <div><img src="http://img12.360buyimg.com/cms/jfs/t1111/356/1391333844/86327/f5e8249d/559f78f7Na3b667b5.jpg" width="640" height="583" alt="" /></div>
+        <div><img src="http://img12.360buyimg.com/cms/jfs/t1198/24/1400863601/57153/594f3150/559f7903Nf1ddcac3.jpg" width="640" height="641" alt=""></div>
+    </div>
+
+    <script src="https://rawgit.com/ufologist/responsive-page/master/responsive-page.js"></script>
+    <script>
+    function responsiveIt() {
+        responsivePage({
+            selector: '.mod-responsive',
+            sliceWidth: 640,
+            center: false
+        });
+    }
+    // document.addEventListener('DOMContentLoaded', function() {
+        responsiveIt();
+    // }, false)
+    window.onresize = function() {
+        responsiveIt();
+    };
+    </script>
+</body>
+</html>
