@@ -1,5 +1,5 @@
 # responsive-page
-v1.0.0 2014-8-15 by Sun
+v1.0.0 2015-7-16 by Sun
 
 让你的页面轻松适配各种移动设备和PC端浏览器
 
@@ -12,8 +12,8 @@ v1.0.0 2014-8-15 by Sun
 * 即使内容很长, 换行也需要正确
 
 ## 示例
-* []()
-* []()
+* [jd.html](http://ufologist.github.io/responsive-page/demo/jd.html)
+* [70c.html](http://ufologist.github.io/responsive-page/demo/70c.html)
 
 ## 使用手册
 最好的使用手册就是示例
