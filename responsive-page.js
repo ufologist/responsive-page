@@ -35,7 +35,7 @@
     };
     function extendDefault(options, defaultOptions) {
         for (var opt in defaultOptions) {
-            options[opt] = options[opt] ? options[opt] : defaultOptions[opt];
+            options[opt] = (typeof options[opt] != 'undefined') ? options[opt] : defaultOptions[opt];
         }
         return options;
     }
