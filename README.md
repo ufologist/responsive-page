@@ -11,9 +11,17 @@ v1.0.0 2015-7-16 by Sun
 * 切图时仅需切640宽(可以配置)的图片
 * 即使内容很长, 换行也需要正确
 
+## 基础原理
+计算出页面内容与页面宽度的比率, 通过 transform: scale 缩放页面内容来达到适配任何屏幕(占满屏幕宽度)的目的.
+
+## 兼容性
+特性: querySelectorAll, CSS3 transform, matchMedia
+*   PC端: IE9+, 其他现代浏览器(chrome, firefox等等)
+* 移动端: iOS4+, Android 2.3+
+
 ## 示例
-* [jd.html](http://ufologist.github.io/responsive-page/demo/jd.html)
-* [70c.html](http://ufologist.github.io/responsive-page/demo/70c.html)
+* [jd.html](http://ufologist.github.io/responsive-page/demo/jd.html) 页面中包含多个需要适配的模块
+* [70c.html](http://ufologist.github.io/responsive-page/demo/70c.html) 页面仅包含一个需要适配的模块和绝对定位的可点击区域, 并开启 center 模式来适配PC端
 
 ## 使用手册
 最好的使用手册就是示例
