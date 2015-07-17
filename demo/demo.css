@@ -1,0 +1,13 @@
+/* demo中的样式是为了避免某些样式问题, 因此最好在做页面的时候加上 */
+body {
+    margin: 0;
+}
+/* 注意避免父级不包含 margin 区域的问题(margin collapse) */
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* 当页面是由图片拼接起来时, 需要去除 img 之间的间隙, 可以通过设置body的背景来观察这个现象 */
+img {
+    vertical-align: middle;
+}

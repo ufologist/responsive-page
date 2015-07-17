@@ -6,26 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="format-detection" content="telephone=no" />
     <title>7客恋城 - 70c.com | 70度一分钟轻松搞定H5场景制作</title>
-    <script src="http://sale.jd.com/jm.htm?js=/m-misc/script/zepto.js"></script>
-    <style>
-    body {
-        margin: 0;
-    }
-    /* 注意避免父级不包含 margin 区域的问题(margin collapse) */
-    p {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    img {
-        vertical-align: middle; /* 去除img之间的间隙, 可以通过设置body的背景来观察 */
-    }
-    </style>
+    <link rel="stylesheet" href="demo.css">
 </head>
 <body style="background-color: #FFEDF3;">
     <div class="mod-responsive">
         <!-- 注意DOM结构, 必须将IMG元素用块级元素包裹起来! 一般使用div -->
-        <div>
+        <div style="position: relative;">
             <img src="img/slice1.jpg" width="640" height="354" alt="">
+            <a style="position: absolute; top: 5px; left: 5px; text-decoration: none; text-shadow: 0 1px #000; color: #589DFA; font-weight: bold; font-size: 1.2em;" href="https://github.com/ufologist/responsive-page">Powered by responsive-page</a>
         </div>
         <div style="position: relative;">
             <img src="img/slice2.jpg" width="640" height="344" alt="">
