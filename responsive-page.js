@@ -3,6 +3,7 @@
  * 
  * @version 1.0.0 2015-7-16
  * @author Sun http://github.com/ufologist/responsive-page
+ * @license MIT https://github.com/ufologist/responsive-page/blob/master/LICENSE
  */
 (function(global) {
     // 工具方法

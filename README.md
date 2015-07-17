@@ -1,7 +1,7 @@
 # responsive-page
 v1.0.0 2015-7-16 by Sun
 
-让你的页面轻松适配各种移动设备和PC端浏览器
+让你的页面轻松适配各种移动设备和PC端浏览器, 1.5kb only!
 
 * 非常适合专题landing页
 * 页面内容一般为几张图片拼接
@@ -47,6 +47,9 @@ responsivePage(options);
 
 ## 版本更新历史
 [CHANGLOG](CHANGLOG.md)
+
+## Licence
+[MIT](https://github.com/ufologist/responsive-page/blob/master/LICENSE)
 
 ## 感谢他们给我的灵感
 * [pageResponse](https://github.com/peunzhang/pageResponse)
