@@ -30,7 +30,7 @@ v1.0.0 2015-7-16 by Sun
 ![演示 responsive-page center 模式](http://ufologist.github.io/responsive-page/responsive-page-center.png)
 
 ## 使用手册
-最好的使用手册就是示例
+最好的使用手册就是示例, [下载/引入JS](https://github.com/ufologist/responsive-page/raw/master/responsive-page.min.js), 执行JS, 坐等适配结果
 
 ## API文档
 ```javascript
