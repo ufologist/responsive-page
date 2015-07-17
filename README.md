@@ -1,4 +1,4 @@
-# ![icon](http://ufologist.github.io/responsive-page/icon-36x36.png) responsive-page
+# ![icon](http://ufologist.github.io/responsive-page/icon.png) responsive-page
 v1.0.0 2015-7-16 by Sun
 
 让你的页面轻松适配各种移动设备和PC端浏览器, 1.5kb only!
