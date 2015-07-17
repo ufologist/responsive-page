@@ -9,11 +9,10 @@
     // -------------------------------
     var browser = {
         css3: (function() {
-            var div = document.createElement("div");
+            var div = global.document.createElement("div");
             var vendors = ['', 'webkit', 'moz', 'ms'];
             var stylePropertyMap = {
-                Transform: 'transform',
-                BoxSizing: 'box-sizing'//, // 如果还需要别的CSS3厂商属性可以追加
+                Transform: 'transform'//, // 如果还需要判断其他的CSS3厂商属性可以在这里追加
                 // Transition: 'transition',
                 // Animation: 'animation'
             };
@@ -44,7 +43,6 @@
     // lib逻辑
     // -------------------------------
     var TRANSFORM = browser.css3.Transform;
-    var BOX_SIZING = browser.css3.BoxSizing;
     var DEFAULT_OPTIONS = {
         selector: '.mod-responsive',
         sliceWidth: 640,
@@ -53,7 +51,7 @@
 
     function wrapIt(element) {
         var parentEl = element.parentElement;
-        // 如果是body下面的元素, 需要包一下, 便于计算总高度
+        // 如果是body下面的元素, 需要包一下, 便于计算总高度, 并避免最底部内容溢出(因为缩放造成的内容溢出)
         if (parentEl == global.document.body) {
             var wrapperEl = document.createElement('div');
             wrapperEl.style.overflow = 'hidden';
@@ -81,51 +79,50 @@
             return;
         }
 
-        // 为了计算宽度
-        element.style.position = 'absolute';
-        var originWidth = element.clientWidth;
-        element.style.position = 'static';
+        // XXX 这里获取原本的 position 其实没有意义
+        var originPosition = element.style.position;
+        var documentWidth = global.document.documentElement.clientWidth;
 
-        var scaleX = element.parentElement.clientWidth / originWidth;
+        // 为了计算容器仅包含内容时的宽度
+        element.style.position = 'absolute';
+        var contentWidth = element.clientWidth;
+        element.style.position = originPosition;
+
+        // 计算缩放比率
+        var scaleX = documentWidth / contentWidth;
+        // 如果大于窗口宽度大于切片了, 那么我们直接以切片为单位来缩放
         if (scaleX > 1) {
-            scaleX = element.parentElement.clientWidth / sliceWidth;
+            scaleX = documentWidth / sliceWidth;
         }
-        var height = element.parentElement.clientHeight * scaleX;
 
         element.style[TRANSFORM + 'Origin'] = '0 0';
         element.style[TRANSFORM] = 'scale(' + scaleX + ')';
-        element.style.height = height + 'px';
-
-        fixChildrenWidth(element, sliceWidth);
-    }
-
-    // 直接子元素固定为切片的宽度, 这样才能解决定位元素的样式问题.
-    // 因为如果不固定这个宽度, 在缩放时由于宽度变小, 会造成定位元素出现换行问题, 样式就不统一了!
-    // 还需要注意元素的padding, border影响宽度的盒模型
-    function fixChildrenWidth(element, sliceWidth) {
-        var childrenEls = element.children;
-        for (var i = 0, length = childrenEls.length; i < length; i++) {
-            // 需要注意元素如果有 padding 或者 border 会造成宽度超出!
-            // 如果元素的内容有溢出(例如内容宽度超过640时), 则会造成溢出部分不会自动换行,
-            // 且内容因为 overflow:hidden 而被隐藏了, 请参考demo中很长内容的那个部分来反应这个问题
-            // 因此需要设置为新的盒模型!
-            var childrenEl = childrenEls[i];
-            if (childrenEl.style[BOX_SIZING] != 'border-box') {
-                childrenEl.style[BOX_SIZING] = 'border-box';
-            }
-            childrenEl.style.width = sliceWidth + 'px';
-        }
+        // 直接固定为切片的宽度, 这样才能解决定位元素的样式问题.
+        // 因为如果不固定这个宽度, 在缩放时由于宽度变小, 会造成定位元素出现换行问题, 样式就不统一了!
+        // 还需要注意元素的padding, border影响盒模型的宽度, 可以通过设置 box-sizing: border-box 来避免这个问题
+        element.style.width = sliceWidth + 'px';
+        // 设置了元素的宽度后元素的高度会变大一点点, 因此这里重新获取高度, 否则会有部分内容被遮挡
+        element.style.height = (element.clientHeight * scaleX) + 'px';
     }
 
     // 通过media query来判断窗口宽度小于切片宽度时才需要适配,
     // 大于切片大小后, 就可以让内容居中显示
-    // 例如: 窗口宽度为320, 小于640的切片大小, 因此我们通过缩放来实现适配
+    // 例如: 窗口宽度为320时小于640的切片大小, 因此我们通过缩放来实现适配
     function isGreaterThanSliceWidth(sliceWidth) {
         return global.matchMedia ? global.matchMedia('(min-width: ' + sliceWidth + 'px)').matches : undefined;
     }
 
     // 对外接口
     // -------------------------------
+    /**
+     * responsivePage
+     * 
+     * @param  {object} options {
+     *                              selector {string} 内容区域的父级元素,接受任何合法的CSS选择器,默认为: .mod-responsive
+     *                              sliceWidth {number} 切片宽度(单位是px), 默认为: 640
+     *                              center {boolean} 页面宽度超过切片宽度后,是否不再适配宽度居中显示在页面中,默认为: true
+     *                          }
+     */
     global.responsivePage = function(options) {
         extendDefault(options, DEFAULT_OPTIONS);
 
