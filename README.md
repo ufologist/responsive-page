@@ -25,7 +25,7 @@ v1.0.0 2015-7-16 by Sun
 * [jd.html](http://ufologist.github.io/responsive-page/demo/jd.html) 页面中包含多个需要适配的模块
 * [70c.html](http://ufologist.github.io/responsive-page/demo/70c.html) 页面仅包含一个需要适配的模块和绝对定位的可点击区域, 并开启 center 模式来适配PC端
 
-页面宽度超过切片宽度后, 不再适配页面宽度, 而是居中显示在页面中
+页面宽度超过切图宽度后, 不再适配页面宽度, 而是居中显示在页面中
 
 ![演示 responsive-page center 模式](http://ufologist.github.io/responsive-page/responsive-page-center.png)
 
@@ -41,8 +41,8 @@ responsivePage(options);
 |---------|------------|---------------------------------------------------------------------------------|
 | options | {          |                                                                                 |
 |         | selector   | string, 内容区域的父级元素, 接受任何合法的CSS选择器, 默认为: .mod-responsive    |
-|         | sliceWidth | number, 切片宽度(单位是px), 默认为: 640                                         |
-|         | center     | boolean, 页面宽度超过切片宽度后, 是否不再适配宽度居中显示在页面中, 默认为: true |
+|         | sliceWidth | number, 切图宽度(单位是px), 默认为: 640                                         |
+|         | center     | boolean, 页面宽度超过切图宽度后, 是否不再适配宽度居中显示在页面中, 默认为: true |
 |         | }          |                                                                                 |
 
 ## 版本更新历史
