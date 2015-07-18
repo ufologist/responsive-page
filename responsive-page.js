@@ -34,6 +34,7 @@
         })()
     };
     function extendDefault(options, defaultOptions) {
+        options = options ? options : {};
         for (var opt in defaultOptions) {
             options[opt] = (typeof options[opt] != 'undefined') ? options[opt] : defaultOptions[opt];
         }
@@ -122,13 +123,13 @@
      *                          }
      */
     global.responsivePage = function(options) {
-        extendDefault(options, DEFAULT_OPTIONS);
+        var _options = extendDefault(options, DEFAULT_OPTIONS);
 
-        var containerEls = global.document.querySelectorAll(options.selector);
+        var containerEls = global.document.querySelectorAll(_options.selector);
         for (var i = 0, length = containerEls.length; i < length; i++) {
             var element = containerEls[i];
             wrapIt(element);
-            responsiveIt(element, options);
+            responsiveIt(element, _options);
         }
     };
 })(window);
