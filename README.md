@@ -34,16 +34,12 @@ v1.0.0 2015-7-16 by Sun
 
 ## API文档
 ```javascript
-responsivePage(options);
+responsivePage({
+    selector: '.mod-responsive', // string, 内容区域的父级元素, 接受任何合法的CSS选择器
+    sliceWidth: 640,             // 切图宽度(单位是px)
+    center: true                 // 页面宽度超过切图宽度后, 是否不再适配宽度居中显示在页面中
+});
 ```
-
-| 参数    |            | 作用                                                                            |
-|---------|------------|---------------------------------------------------------------------------------|
-| options | {          |                                                                                 |
-|         | selector   | string, 内容区域的父级元素, 接受任何合法的CSS选择器, 默认为: .mod-responsive    |
-|         | sliceWidth | number, 切图宽度(单位是px), 默认为: 640                                         |
-|         | center     | boolean, 页面宽度超过切图宽度后, 是否不再适配宽度居中显示在页面中, 默认为: true |
-|         | }          |                                                                                 |
 
 ## 版本更新历史
 [CHANGLOG](CHANGLOG.md)
