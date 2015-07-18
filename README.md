@@ -35,9 +35,9 @@ v1.0.0 2015-7-16 by Sun
 ## API文档
 ```javascript
 responsivePage({
-    selector: '.mod-responsive', // string, 内容区域的父级元素, 接受任何合法的CSS选择器
-    sliceWidth: 640,             // 切图宽度(单位是px)
-    center: true                 // 页面宽度超过切图宽度后, 是否不再适配宽度居中显示在页面中
+    selector: '.mod-responsive', // string 内容区域的父级元素, 接受任何合法的CSS选择器
+    sliceWidth: 640,             // number 切图宽度(单位是px)
+    center: true                 // boolean 页面宽度超过切图宽度后, 是否不再适配宽度居中显示在页面中
 });
 ```
 
