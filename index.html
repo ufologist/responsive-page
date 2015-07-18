@@ -76,44 +76,11 @@
 <h2>
 <a id="api文档" class="anchor" href="#api%E6%96%87%E6%A1%A3" aria-hidden="true"><span class="octicon octicon-link"></span></a>API文档</h2>
 
-<div class="highlight highlight-javascript"><pre>responsivePage(options);</pre></div>
-
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th></th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>options</td>
-<td>{</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>selector</td>
-<td>string, 内容区域的父级元素, 接受任何合法的CSS选择器, 默认为: .mod-responsive</td>
-</tr>
-<tr>
-<td></td>
-<td>sliceWidth</td>
-<td>number, 切图宽度(单位是px), 默认为: 640</td>
-</tr>
-<tr>
-<td></td>
-<td>center</td>
-<td>boolean, 页面宽度超过切图宽度后, 是否不再适配宽度居中显示在页面中, 默认为: true</td>
-</tr>
-<tr>
-<td></td>
-<td>}</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div class="highlight highlight-javascript"><pre>responsivePage({
+    selector: '.mod-responsive', // string, 内容区域的父级元素, 接受任何合法的CSS选择器
+    sliceWidth: 640,             // 切图宽度(单位是px)
+    center: true                 // 页面宽度超过切图宽度后, 是否不再适配宽度居中显示在页面中
+});</pre></div>
 
 <h2>
 <a id="版本更新历史" class="anchor" href="#%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E5%8E%86%E5%8F%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>版本更新历史</h2>
