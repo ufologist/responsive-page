@@ -1,7 +1,7 @@
 # ![icon](http://ufologist.github.io/responsive-page/icon.png) responsive-page
 v1.0.0 2015-7-16 by Sun
 
-让你的页面轻松适配各种移动设备和PC端浏览器, 1.57 KB only!
+让你的页面轻松适配各种移动设备和PC端浏览器, 1.46 KB only! 无任何其他依赖.
 
 * 非常适合专题landing页
 * 页面内容一般为几张图片拼接
