@@ -47,9 +47,8 @@ responsivePage({
 ## Licence
 [MIT](https://github.com/ufologist/responsive-page/blob/master/LICENSE)
 
-## 吐槽
-如果有任何bug或者问题, 请发个 [issue](https://github.com/ufologist/responsive-page/issues) 给项目, 非常感谢.
-
 ## 感谢他们给我的灵感
 * [pageResponse](https://github.com/peunzhang/pageResponse)
 * [JD的页面](http://sale.jd.com/m/act/LZkDEwunm53ilyrR.html)
+
+如果有任何bug或者问题, 请发个 [issue](https://github.com/ufologist/responsive-page/issues) 给项目, 非常感谢.
