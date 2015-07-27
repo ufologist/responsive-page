@@ -41,11 +41,11 @@ responsivePage({
 });
 ```
 
-## 版本更新历史
-[CHANGLOG](CHANGLOG.md)
+## 感谢他们给我的灵感
+* [pageResponse](https://github.com/peunzhang/pageResponse)
+* [JD的页面](http://sale.jd.com/m/act/LZkDEwunm53ilyrR.html)
 
-## Licence
-[MIT](https://github.com/ufologist/responsive-page/blob/master/LICENSE)
+如果有任何bug或者问题, 请发个 [issue](https://github.com/ufologist/responsive-page/issues) 给项目, 非常感谢.
 
 ## 其他适配方案
 * [百分比](http://ufologist.github.io/responsive-page/others-responsive/70c-percent.html)
@@ -64,8 +64,8 @@ responsivePage({
 
     **对于混合大段文字内容时也出现了一点点不适配的问题, 文字相对于原始布局出现了一些偏移, 其他方面都很好, 算是非常完满的适配方案了.**
 
-## 感谢他们给我的灵感
-* [pageResponse](https://github.com/peunzhang/pageResponse)
-* [JD的页面](http://sale.jd.com/m/act/LZkDEwunm53ilyrR.html)
+## 版本更新历史
+[CHANGLOG](CHANGLOG.md)
 
-如果有任何bug或者问题, 请发个 [issue](https://github.com/ufologist/responsive-page/issues) 给项目, 非常感谢.
+## Licence
+[MIT](https://github.com/ufologist/responsive-page/blob/master/LICENSE)
