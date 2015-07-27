@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no" />
+    <title>7客恋城 - 70c.com | 70度一分钟轻松搞定H5场景制作</title>
+    <link rel="stylesheet" href="../demo/demo.css">
+    <style>
+    /* 在PC时居中显示 */
+    .mod-responsive {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mod-responsive img {
+        /* 640px时, html font-size: 40px; */
+        width: 16rem;
+        height: auto;
+        max-width: 100%;
+    }
+    </style>
+</head>
+<body style="background-color: #FFEEF4;">
+    <div class="mod-responsive">
+        <!-- 注意DOM结构, 必须将IMG元素用块级元素包裹起来! 一般使用div -->
+        <div style="position: relative;">
+            <img src="../demo/img/slice1.jpg" alt="">
+            <a style="position: absolute; top: 0.125rem; left: 0.125rem; text-decoration: none; text-shadow: 0 1px #000; color: #589DFA; font-weight: bold; font-size: 1.2em;" target="_blank" href="https://github.com/ufologist/responsive-page">通过 rem 来"解决"移动设备的适配问题</a>
+            <a target="_blank" title="点击进入电影官方微博活动" href="http://weibo.com/5466909917/Cr5H1fO5D?ref=&type=comment#_rnd1436868145238" style="position: absolute;top: 6.325rem;right: 1.325rem;width: 3.425rem;height: 1.075rem;background: url(../demo/img/btn-weibo.gif) no-repeat;background-size: cover;"></a>
+        </div>
+        <div><img src="../demo/img/slice2.jpg"></div>
+        <div style="position: relative;">
+            <img src="../demo/img/slice3.jpg" width="640" height="495" alt="">
+            <a style="position: absolute; top: 5.625rem; left: 1.75rem; width: 2.625rem; height: 0.925rem; background: url(../demo/img/btn-register.gif) no-repeat;background-size: cover;" href="http://70c.com/register.html" target="_blank" title="点击注册"></a>
+            <a style="position: absolute; top: 4rem; left: 8.5rem; width: 3.75rem; height: 3rem;" href="http://70c.com/w/CCZGWZZ" target="_blank" title="恋城"></a>
+        </div>
+        <div style="position: relative;">
+            <img src="../demo/img/slice4.jpg">
+            <ul style="position:absolute;top: 3.375rem;left: 0.975rem;font-size: 0.35rem;line-height: 0.825rem;list-style:none;font-weight:bold;">
+                <li>在电脑上登陆<a target="_blank" href="http://www.70c.com/" style="color:#70ba2e;">70c</a>官网，注册账号，选择上方官方提供的主题模板。</li>
+                <li>按照主题制作场景，根据主题 #邂逅# H5模板制作成属于自己的H5。</li>
+                <li>带话题 #恋城之邂逅# 分享到微博并 <a target="_blank" href="http://weibo.com/liancheng2015?from=feed&amp;loc=at&amp;nick=" style="color:#db0a76;">@恋爱中的城市官博</a>、<a target="_blank" href="http://weibo.com/p/1006065571200063/home?from=page_100606&amp;mod=TAB#place70" style="color:#70ba2e;">@70度</a>、<a target="_blank" href="http://weibo.com/p/1006065591146044/home?from=page_100606&amp;mod=TAB#place" style="color:#25c6b9;">@疯传</a>。</li>
+                <li>在论坛活动贴中跟帖回复主题、70度账号、链接。<a target="_blank" title="点击进入论坛" href="http://bbs.70c.com/forum.php?mod=viewthread&amp;tid=5480" style="position:relative;top: 0.175rem;display:inline-block;width: 2.475rem;height: 0.65rem;background: url(../demo/img/btn-bbs.gif) no-repeat;background-size: cover;"></a></li>
+                <li>第一周作品请在7月14日-7月21日提交作品到论坛跟帖。</li>
+            </ul>
+        </div>
+        <div><img src="../demo/img/slice5.jpg" alt=""></div>
+    </div>
+    <script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                // 宽度为640px时, 固定html font-size, 让整个页面居中
+                if (clientWidth >= 640) {
+                    docEl.style.fontSize = '40px';
+                } else {
+                    docEl.style.fontSize = 40 * (clientWidth / 640) + 'px';
+                }
+            };
+
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script> 
+</body>
+</html>

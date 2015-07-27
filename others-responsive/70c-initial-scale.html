@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no" />
+    <title>7客恋城 - 70c.com | 70度一分钟轻松搞定H5场景制作</title>
+    <link rel="stylesheet" href="../demo/demo.css">
+    <style>
+    .mod-responsive {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+</head>
+<body style="background-color: #FFEEF4;">
+    <div class="mod-responsive">
+        <!-- 注意DOM结构, 必须将IMG元素用块级元素包裹起来! 一般使用div -->
+        <div style="position: relative;">
+            <img src="../demo/img/slice1.jpg" width="640" height="354" alt="">
+            <a style="position: absolute; top: 5px; left: 5px; text-decoration: none; text-shadow: 0 1px #000; color: #589DFA; font-weight: bold; font-size: 1.2em;" target="_blank" href="https://github.com/ufologist/responsive-page">通过 initial-scale 来"解决"适配问题</a>
+            <a target="_blank" title="点击进入电影官方微博活动" href="http://weibo.com/5466909917/Cr5H1fO5D?ref=&type=comment#_rnd1436868145238" style="position: absolute;top: 253px;right: 53px;width: 137px;height: 43px;background: url(../demo/img/btn-weibo.gif) no-repeat;"></a>
+        </div>
+        <div><img src="../demo/img/slice2.jpg" width="640" height="375" alt=""></div>
+        <div style="position: relative;">
+            <img src="../demo/img/slice3.jpg" width="640" height="495" alt="">
+            <a style="position: absolute; top: 225px; left: 70px; width: 105px; height: 37px; background: url(../demo/img/btn-register.gif) no-repeat;" href="http://70c.com/register.html" target="_blank" title="点击注册"></a>
+            <a style="position: absolute; top: 160px; left: 340px; width: 150px; height: 120px;" href="http://70c.com/w/CCZGWZZ" target="_blank" title="恋城"></a>
+        </div>
+        <div style="position: relative;">
+            <img src="../demo/img/slice4.jpg" width="640" height="371" alt="">
+            <ul style="position:absolute;top:135px;left:39px;font-size:14px;line-height:33px;list-style:none;font-weight:bold;">
+                <li>在电脑上登陆<a target="_blank" href="http://www.70c.com/" style="color:#70ba2e;">70c</a>官网，注册账号，选择上方官方提供的主题模板。</li>
+                <li>按照主题制作场景，根据主题 #邂逅# H5模板制作成属于自己的H5。</li>
+                <li>带话题 #恋城之邂逅# 分享到微博并 <a target="_blank" href="http://weibo.com/liancheng2015?from=feed&amp;loc=at&amp;nick=" style="color:#db0a76;">@恋爱中的城市官博</a>、<a target="_blank" href="http://weibo.com/p/1006065571200063/home?from=page_100606&amp;mod=TAB#place70" style="color:#70ba2e;">@70度</a>、<a target="_blank" href="http://weibo.com/p/1006065591146044/home?from=page_100606&amp;mod=TAB#place" style="color:#25c6b9;">@疯传</a>。</li>
+                <li>在论坛活动贴中跟帖回复主题、70度账号、链接。<a target="_blank" title="点击进入论坛" href="http://bbs.70c.com/forum.php?mod=viewthread&amp;tid=5480" style="position:relative;top:7px;display:inline-block;width: 99px;height:26px;background: url(../demo/img/btn-bbs.gif) no-repeat;"></a></li>
+                <li>第一周作品请在7月14日-7月21日提交作品到论坛跟帖。</li>
+            </ul>
+        </div>
+        <div><img src="../demo/img/slice5.jpg" width="640" height="443" alt=""></div>
+    </div>
+
+    <script>
+    var sliceWidth = 640;
+    var documentWidth = document.documentElement.clientWidth;
+    // 内容区域的宽度就是切图的宽度
+    var contentWidth = sliceWidth;
+    // 计算缩放比率
+    var scaleX = documentWidth / contentWidth;
+    document.querySelector('meta[name="viewport"]').content = 'width=device-width, initial-scale=' + scaleX;
+    </script>
+</body>
+</html>
