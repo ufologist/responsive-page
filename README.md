@@ -47,6 +47,20 @@ responsivePage({
 ## Licence
 [MIT](https://github.com/ufologist/responsive-page/blob/master/LICENSE)
 
+## 其他适配方案
+* [百分比](http://ufologist.github.io/responsive-page/others-responsive/70c-percent.html)
+
+    只用CSS就能够适配屏幕, 比较适合多图片拼接的页面. 由于需要适配屏幕, 因此绝对定位元素的位置, 宽, 高都需要使用百分比来设置, 在布局时我们需要手工将原来的 px 值计算成百分比(特别是 top 难以计算), 让人心好累.
+    **对于混合大段文字内容时就会出现适配不了的问题, 可能就需要你通过JS来动态设置文字的大小和行高了.**
+* [initial-scale](http://ufologist.github.io/responsive-page/others-responsive/70c-initial-scale.html)
+
+    用非常简单的JS就能够实现和 responsive-page 一样的适配效果, **但对于混合大段文字内容时就会出现适配不了的问题(这个很可能是移动端浏览器的BUG造成的, 通过chrome模拟器没有这个问题)**
+* [rem](http://ufologist.github.io/responsive-page/others-responsive/70c-rem.html)
+
+    与"百分比"的解决方案类似, 只不过这里使用的是 rem 单位, 使用此方案时所有元素的尺寸单位和位置单位都需要使用 rem, 才能确保适配屏幕时元素的尺寸能够自由适配, 相对于百分比值的计算, 计算出元素的 rem 值要方便多了.
+    此方案也需要借助 JS 来实现适配的逻辑, 主要是根据屏幕宽度比来修改 root(html) font-size, 以达到适配任何屏幕的目的. 可以参考[web app变革之rem](http://isux.tencent.com/web-app-rem.html)来详细了解下关于 rem 和适配.
+    **对于混合大段文字内容时也出现了一点点不适配的问题, 文字相对于原始布局出现了一些偏移, 其他方面都很好, 算是非常完满的适配方案了.**
+
 ## 感谢他们给我的灵感
 * [pageResponse](https://github.com/peunzhang/pageResponse)
 * [JD的页面](http://sale.jd.com/m/act/LZkDEwunm53ilyrR.html)
