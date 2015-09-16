@@ -60,7 +60,7 @@ responsivePage({
 
     与"百分比"的解决方案类似, 只不过这里使用的是 rem 单位, 使用此方案时所有元素的尺寸单位和位置单位都需要使用 rem, 才能确保适配屏幕时元素的尺寸能够自由适配, 相对于百分比值的计算, 计算出元素的 rem 值要方便多了.
 
-    此方案也需要借助 JS 来实现适配的逻辑, 主要是根据屏幕宽度比来修改 root(html) font-size, 以达到适配任何屏幕的目的. 可以参考[web app变革之rem](http://isux.tencent.com/web-app-rem.html)来详细了解下关于 rem 和适配.
+    此方案也需要借助 JS 来实现适配的逻辑, 主要是根据屏幕宽度比来修改 root(html) font-size, 以达到适配任何屏幕的目的. 可以参考[web app变革之rem](http://isux.tencent.com/web-app-rem.html)和[阿里无线前端可伸缩布局方案](https://github.com/amfe/lib-flexible)来详细了解下关于 rem 和适配.
 
     **对于混合大段文字内容时也出现了一点点不适配的问题, 文字相对于原始布局出现了一些偏移, 其他方面都很好, 算是非常完满的适配方案了.**
 
