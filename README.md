@@ -1,14 +1,14 @@
 # ![icon](http://ufologist.github.io/responsive-page/icon.png) responsive-page
 v1.0.0 2015-7-16 by Sun
 
-让你的页面轻松适配各种移动设备和PC端浏览器, 1.46 KB only! 无任何其他依赖.
+让你的页面轻松适配各种移动设备和桌面端(PC)浏览器, 1.46 KB only! 无任何其他依赖.
 
-* 非常适合专题landing页
-* 页面内容一般为几张图片拼接
-* 同时要适配移动端和PC端
-* 要自适应宽度
-* (绝对)定位元素仅需使用px单位即可适配
-* 切图时仅需切640宽(可以配置)的图片
+* 非常适合专题着陆页(landing page)
+* 页面内容一般为几张图片拼接而成
+* 需同时适配移动端和桌面端
+* 需自适应宽度
+* (绝对)定位元素仅需使用 px 单位即可适配
+* 仅需按照 640px(可配置) 宽的设计稿来切图
 * 即使内容很长, 换行也需要正确
 
 ![演示 responsive-page 适配功能](http://ufologist.github.io/responsive-page/responsive-page.gif)
@@ -36,14 +36,14 @@ v1.0.0 2015-7-16 by Sun
 ```javascript
 responsivePage({
     selector: '.mod-responsive', // string 内容区域的父级元素, 接受任何合法的CSS选择器
-    sliceWidth: 640,             // number 切图宽度(单位是px)
+    sliceWidth: 640,             // number 切图宽度(单位是px), 即设计稿宽度
     center: true                 // boolean 页面宽度超过切图宽度后, 是否不再适配宽度居中显示在页面中
 });
 ```
 
 ## 感谢他们给我的灵感
 * [pageResponse](https://github.com/peunzhang/pageResponse)
-* [JD的页面](http://sale.jd.com/m/act/LZkDEwunm53ilyrR.html)
+* [JD的页面](http://sale.jd.com/m/act/LZkDEwunm53ilyrR.html) 已经下线了...
 
 如果有任何bug或者问题, 请发个 [issue](https://github.com/ufologist/responsive-page/issues) 给项目, 非常感谢.
 
@@ -56,7 +56,7 @@ responsivePage({
 * [initial-scale](http://ufologist.github.io/responsive-page/others-responsive/70c-initial-scale.html)
 
     用非常简单的JS就能够实现和 responsive-page 一样的适配效果, **但对于混合大段文字内容时就会出现适配不了的问题(这个很可能是移动端浏览器的BUG造成的, 通过chrome模拟时没有这个问题)**
-* [rem](http://ufologist.github.io/responsive-page/others-responsive/70c-rem.html)
+* [rem](http://ufologist.github.io/responsive-page/others-responsive/70c-rem.html) | [flexible](http://ufologist.github.io/responsive-page/others-responsive/flexible.html)
 
     与"百分比"的解决方案类似, 只不过这里使用的是 rem 单位, 使用此方案时所有元素的尺寸单位和位置单位都需要使用 rem, 才能确保适配屏幕时元素的尺寸能够自由适配, 相对于百分比值的计算, 计算出元素的 rem 值要方便多了.
 
