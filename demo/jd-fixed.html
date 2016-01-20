@@ -52,7 +52,7 @@
         responsiveIt();
     };
 
-    // fixbug: 将 fixed 元素后加入到 DOM 中来解决
+    // fixbug: 在执行完 responsivePage 后再将 fixed 元素后加入到 DOM 中来解决
     // #2 某元素如果用position: fixed时不会悬浮
     var div = document.createElement('div');
     div.innerHTML = '<a style="position: fixed; top: 5px; left: 5px; text-decoration: none; text-shadow: 0 1px #000; color: #589DFA; font-weight: bold; font-size: 1.2em;" target="_blank" href="https://github.com/ufologist/responsive-page">Powered by responsive-page</a>'
